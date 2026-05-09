@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mycomane — IA & Web Design</title>
-  <meta name="description" content="Mycomane : conception de sites web, agents IA sur vos plateformes et agent vocal IA qui répond à vos appels 24/7." />
+  <title>Mycomane — Agence Web & IA | Québec</title>
+  <meta name="description" content="20 ans d'expertise TI. Sites web, agents IA et assistant vocal pour propulser votre entreprise au Québec." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="stylesheet" href="styles.css?v=3" />
 </head>
 <body>
 
@@ -15,13 +15,15 @@
   <nav id="navbar">
     <div class="nav-inner">
       <a href="#" class="logo">
-        <span class="logo-icon"><svg viewBox="0 0 18 18" fill="none"><path d="M3 9h12M9 3v12M5 5l8 8M13 5l-8 8" stroke="#0B0F1A" stroke-width="2" stroke-linecap="round"/></svg></span>
+        <span class="logo-mark">M</span>
         <span class="logo-text">Mycomane</span>
       </a>
       <ul class="nav-links">
         <li><a href="#services">Services</a></li>
-        <li><a href="#comment">Comment ça marche</a></li>
-        <li><a href="#contact" class="btn-nav">Commencer</a></li>
+        <li><a href="#stats">Résultats</a></li>
+        <li><a href="#pourquoi-ia">Pourquoi l'IA</a></li>
+        <li><a href="#processus">Processus</a></li>
+        <li><a href="#contact" class="btn-nav">Consultation gratuite</a></li>
       </ul>
       <button class="menu-toggle" id="menuToggle" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -31,61 +33,88 @@
 
   <!-- HERO -->
   <section id="hero">
-    <canvas id="particleCanvas"></canvas>
-    <div class="hero-glow glow-1"></div>
-    <div class="hero-glow glow-2"></div>
-    <div class="hero-content">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        Intelligence Artificielle · Nouvelle Génération
-      </div>
-      <h1>
-        Propulsez votre business<br />
-        <span class="gold-text">avec l'IA & le Web</span>
-      </h1>
-      <p class="hero-sub">
-        Sites web sur mesure. Agents IA sur vos plateformes.<br />
-        Un assistant vocal qui répond à vos appels <strong>24h/24, 7j/7</strong>.
-      </p>
-      <div class="hero-cta">
-        <a href="#contact" class="btn-primary">Obtenez une démo gratuite</a>
-        <a href="#services" class="btn-ghost">Voir nos services</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-num" data-target="98">0</span><span>%</span>
-          <span class="stat-label">Clients satisfaits</span>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-tag">Agence Web & Intelligence Artificielle · Québec</div>
+        <h1>Votre entreprise mérite une présence numérique <em>qui performe.</em></h1>
+        <p class="hero-sub">Avec 20 ans d'expertise en technologies de l'information, je conçois des sites web qui convertissent et des agents IA qui travaillent pour vous 24h/24.</p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn-primary">Réserver ma consultation gratuite</a>
+          <a href="#services" class="btn-outline">Découvrir les services</a>
         </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num" data-target="24">0</span><span>h/7</span>
-          <span class="stat-label">Agent vocal actif</span>
+        <div class="hero-proof">
+          <div class="proof-item">
+            <strong>20 ans</strong>
+            <span>d'expertise TI</span>
+          </div>
+          <div class="proof-sep"></div>
+          <div class="proof-item">
+            <strong>24h/7</strong>
+            <span>agent vocal actif</span>
+          </div>
+          <div class="proof-sep"></div>
+          <div class="proof-item">
+            <strong>Québec</strong>
+            <span>service local</span>
+          </div>
         </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num" data-target="3">0</span><span>x</span>
-          <span class="stat-label">Plus de conversions</span>
+      </div>
+      <div class="hero-right">
+        <div class="hero-img-wrap">
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" alt="Consultation professionnelle" class="hero-img" />
+          <div class="hero-card card-stat">
+            <span class="card-num">+23%</span>
+            <span class="card-label">de conversions avec un agent IA</span>
+          </div>
+          <div class="hero-card card-online">
+            <span class="dot-green"></span>
+            <span>Agent vocal en ligne</span>
+          </div>
         </div>
       </div>
     </div>
-    <div class="hero-visual">
-      <div class="phone-mockup">
-        <div class="phone-screen">
-          <div class="call-ui">
-            <div class="call-avatar">AI</div>
-            <div class="call-name">Agent Mycomane</div>
-            <div class="call-status">
-              <span class="pulse-dot"></span> En appel...
-            </div>
-            <div class="call-wave">
-              <span></span><span></span><span></span><span></span><span></span>
-              <span></span><span></span><span></span><span></span>
-            </div>
-            <div class="call-actions">
-              <button class="call-btn transfer">📲 Transférer</button>
-              <button class="call-btn end">✕</button>
-            </div>
-          </div>
+  </section>
+
+  <!-- LOGOS / CONFIANCE -->
+  <section id="confiance">
+    <div class="container">
+      <p class="confiance-label">Technologies & plateformes maîtrisées</p>
+      <div class="logos-row">
+        <span class="logo-chip">WordPress</span>
+        <span class="logo-chip">Shopify</span>
+        <span class="logo-chip">OpenAI</span>
+        <span class="logo-chip">Vapi AI</span>
+        <span class="logo-chip">Meta Ads</span>
+        <span class="logo-chip">Google Analytics</span>
+        <span class="logo-chip">Retell AI</span>
+        <span class="logo-chip">Make.com</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAND -->
+  <section id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-block">
+          <div class="stat-num">75<span>%</span></div>
+          <div class="stat-text">des consommateurs jugent la crédibilité d'une entreprise <strong>par son site web</strong></div>
+          <div class="stat-source">— Étude Stanford University</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num">50<span>ms</span></div>
+          <div class="stat-text">c'est le temps qu'un visiteur met pour former <strong>une première impression</strong> de votre site</div>
+          <div class="stat-source">— Recherche Google</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num">+23<span>%</span></div>
+          <div class="stat-text">d'augmentation des conversions avec un <strong>agent IA conversationnel</strong> bien configuré</div>
+          <div class="stat-source">— Glassix Study, 2024</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num">100<span>x</span></div>
+          <div class="stat-text">de retour sur investissement pour chaque dollar investi <strong>en expérience utilisateur</strong></div>
+          <div class="stat-source">— Forrester Research</div>
         </div>
       </div>
     </div>
@@ -94,117 +123,204 @@
   <!-- SERVICES -->
   <section id="services">
     <div class="container">
-      <div class="section-label">Ce que nous faisons</div>
-      <h2>Trois services,<br /><span class="gold-text">un seul objectif</span></h2>
-      <p class="section-sub">Transformer votre présence digitale grâce à des technologies d'intelligence artificielle avancées.</p>
+      <div class="section-header">
+        <div class="section-tag">Nos services</div>
+        <h2>Trois solutions pour <br />accélérer votre croissance</h2>
+      </div>
 
-      <div class="services-grid">
+      <div class="services-list">
 
-        <div class="service-card" data-index="0">
-          <div class="service-icon-wrap">
-            <div class="service-icon">
-              <svg viewBox="0 0 48 48" fill="none"><rect x="4" y="8" width="40" height="28" rx="4" stroke="currentColor" stroke-width="2.5"/><path d="M16 36v4M32 36v4M10 40h28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M14 20h6M14 25h12M28 20h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </div>
+        <div class="service-row reveal">
+          <div class="service-img-col">
+            <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=700&q=80" alt="Conception de site web professionnel" />
           </div>
-          <h3>Conception de Sites Web</h3>
-          <p>Des sites web modernes, rapides et optimisés SEO conçus pour convertir vos visiteurs en clients. Design sur mesure qui reflète votre marque.</p>
-          <ul class="service-features">
-            <li>Design responsive & moderne</li>
-            <li>Optimisation SEO avancée</li>
-            <li>Performance & vitesse maximale</li>
-            <li>Intégration CMS & e-commerce</li>
-          </ul>
+          <div class="service-text-col">
+            <div class="service-num">01</div>
+            <h3>Conception de Sites Web</h3>
+            <p>Un site web professionnel n'est pas une dépense — c'est votre meilleur vendeur. Disponible 24h/24, il représente votre entreprise auprès de milliers de clients potentiels chaque jour.</p>
+            <p>Selon une étude de Stanford, <strong>75% des consommateurs jugent la crédibilité d'une entreprise par la qualité de son site web.</strong> Un mauvais design = des clients perdus.</p>
+            <ul class="service-list">
+              <li>Design sur mesure, adapté à votre industrie</li>
+              <li>Optimisé pour Google (SEO) dès la conception</li>
+              <li>Rapide, sécurisé, compatible mobile</li>
+              <li>Intégration boutique en ligne si nécessaire</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="service-card featured" data-index="1">
-          <div class="featured-badge">Le plus populaire</div>
-          <div class="service-icon-wrap">
-            <div class="service-icon">
-              <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="10" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="24" r="3" fill="currentColor"/><path d="M24 4v6M24 38v6M4 24h6M38 24h6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M9.4 9.4l4.2 4.2M34.4 34.4l4.2 4.2M38.6 9.4l-4.2 4.2M13.6 34.4l-4.2 4.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </div>
+        <div class="service-row reverse reveal">
+          <div class="service-img-col">
+            <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=700&q=80" alt="Agent IA chatbot entreprise" />
           </div>
-          <h3>Agents IA sur vos Plateformes</h3>
-          <p>Déployez des agents conversationnels intelligents directement sur votre site web et vos réseaux sociaux. Disponibles 24/7 pour engager vos clients.</p>
-          <ul class="service-features">
-            <li>Chatbot IA personnalisé à votre marque</li>
-            <li>Intégration Instagram, Facebook, WhatsApp</li>
-            <li>Apprentissage continu de votre business</li>
-            <li>Qualification automatique des leads</li>
-          </ul>
+          <div class="service-text-col">
+            <div class="service-num">02</div>
+            <h3>Agents IA sur vos Plateformes</h3>
+            <p>Vos clients posent des questions à toute heure — sur votre site, sur Instagram, sur Facebook. Un agent IA entraîné sur votre business répond instantanément, qualifie les prospects et libère votre temps.</p>
+            <p><strong>Les entreprises qui déploient un chatbot IA voient en moyenne 23% d'augmentation de leurs conversions</strong> et une réduction significative du temps de réponse client.</p>
+            <ul class="service-list">
+              <li>Agent entraîné sur vos produits et services</li>
+              <li>Déploiement sur site web, Instagram, Facebook, WhatsApp</li>
+              <li>Qualification automatique des leads entrants</li>
+              <li>Disponible 24h/24 sans frais supplémentaires</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="service-card" data-index="2">
-          <div class="service-icon-wrap">
-            <div class="service-icon">
-              <svg viewBox="0 0 48 48" fill="none"><path d="M20 8h8a4 4 0 014 4v16a4 4 0 01-4 4h-8a4 4 0 01-4-4V12a4 4 0 014-4z" stroke="currentColor" stroke-width="2.5"/><path d="M16 16H8a4 4 0 00-4 4v4a4 4 0 004 4h8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M24 32v8M20 40h8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="38" cy="14" r="6" stroke="currentColor" stroke-width="2.5"/><path d="M36 14l1.5 1.5L40 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
+        <div class="service-row reveal">
+          <div class="service-img-col">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=700&q=80" alt="Agent vocal IA téléphone entreprise" />
           </div>
-          <h3>Agent IA Vocal</h3>
-          <p>Un agent IA vocal répond à chacun de vos appels avec une voix naturelle, qualifie les demandes et transfère les urgences directement sur votre mobile.</p>
-          <ul class="service-features">
-            <li>Voix naturelle & professionnelle</li>
-            <li>Transfert automatique des urgences</li>
-            <li>Prise de messages & rappels</li>
-            <li>Disponible 24h/24, 7j/7</li>
-          </ul>
+          <div class="service-text-col">
+            <div class="service-num">03</div>
+            <h3>Agent IA Vocal</h3>
+            <p>Chaque appel manqué est un client potentiel perdu. Un agent vocal IA répond à chacun de vos appels avec une voix naturelle et professionnelle, 24h/24, 7j/7 — et transfère les urgences directement sur votre mobile.</p>
+            <p>Idéal pour les professionnels, les cliniques, les contractors et toute PME qui reçoit des appels en dehors des heures d'ouverture.</p>
+            <ul class="service-list">
+              <li>Voix naturelle, personnalisée à votre marque</li>
+              <li>Transfert automatique des appels urgents</li>
+              <li>Prise de messages et planification de rappels</li>
+              <li>Aucun appel manqué, aucune opportunité perdue</li>
+            </ul>
+          </div>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
-  <section id="comment">
+  <!-- POURQUOI L'IA — SECTION INFORMATIVE -->
+  <section id="pourquoi-ia">
     <div class="container">
-      <div class="section-label">Processus simple</div>
-      <h2>Opérationnel en<br /><span class="gold-text">72 heures</span></h2>
-      <p class="section-sub">Un processus streamliné pour que vous puissiez profiter de l'IA le plus rapidement possible.</p>
+      <div class="section-header centered">
+        <div class="section-tag">Pourquoi agir maintenant</div>
+        <h2>L'IA transforme les règles du jeu<br />pour les PME québécoises</h2>
+        <p class="section-sub">Ce n'est plus une tendance réservée aux grandes entreprises. Les outils d'intelligence artificielle sont aujourd'hui accessibles, abordables, et ils changent concrètement les résultats des petites et moyennes entreprises.</p>
+      </div>
 
-      <div class="steps-grid">
-        <div class="step">
-          <div class="step-number">01</div>
-          <div class="step-content">
+      <div class="ia-grid">
+        <div class="ia-card reveal">
+          <div class="ia-icon">
+            <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="13" stroke="currentColor" stroke-width="1.8"/><path d="M10 16h12M16 10v12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h4>Disponibilité permanente</h4>
+          <p>Vos compétiteurs ferment à 17h. Votre agent IA, lui, répond aux questions des clients à 22h un dimanche. Selon Drift, <strong>79% des clients préfèrent le chat en temps réel</strong> pour obtenir une réponse rapide.</p>
+        </div>
+        <div class="ia-card reveal">
+          <div class="ia-icon">
+            <svg viewBox="0 0 32 32" fill="none"><path d="M4 26l6-6 4 4 8-10 6-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h4>Qualification des leads</h4>
+          <p>Un agent IA pose les bonnes questions, identifie les clients sérieux et vous les présente prêts à acheter. Résultat : vous passez votre temps à fermer des ventes, pas à filtrer des curieux.</p>
+        </div>
+        <div class="ia-card reveal">
+          <div class="ia-icon">
+            <svg viewBox="0 0 32 32" fill="none"><rect x="4" y="6" width="24" height="20" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M10 12h12M10 16h8M10 20h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h4>Cohérence de la communication</h4>
+          <p>Contrairement à un employé, un agent IA ne se lève pas du mauvais pied. Chaque interaction respecte votre ton, vos valeurs et vos informations — <strong>sans exception et sans erreur.</strong></p>
+        </div>
+        <div class="ia-card reveal">
+          <div class="ia-icon">
+            <svg viewBox="0 0 32 32" fill="none"><path d="M16 4v4M16 24v4M4 16h4M24 16h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="16" cy="16" r="6" stroke="currentColor" stroke-width="1.8"/></svg>
+          </div>
+          <h4>Avantage compétitif immédiat</h4>
+          <p>Au Québec, la majorité des PME n'ont pas encore adopté ces technologies. <strong>Chaque mois d'attente est un avantage cédé à vos compétiteurs</strong> qui, eux, passent à l'action.</p>
+        </div>
+      </div>
+
+      <div class="ia-quote reveal">
+        <blockquote>
+          "D'ici 2026, les interactions clients gérées par l'IA sans intervention humaine atteindront <strong>1 interaction sur 10</strong> dans les entreprises qui adoptent ces technologies."
+        </blockquote>
+        <cite>— Gartner Research, 2024</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERTISE -->
+  <section id="expertise">
+    <div class="expertise-inner">
+      <div class="expertise-img">
+        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" alt="Expert TI Québec 20 ans expérience" />
+      </div>
+      <div class="expertise-text">
+        <div class="section-tag">À propos</div>
+        <h2>20 ans au cœur des technologies de l'information</h2>
+        <p>Avant de lancer Mycomane, j'ai passé deux décennies comme spécialiste TI — à comprendre les systèmes, à résoudre des problèmes complexes et à aider des organisations à tirer le meilleur de la technologie.</p>
+        <p>Aujourd'hui, je mets cette expertise au service des entrepreneurs et des PME du Québec pour leur donner accès à des outils qui, jusqu'à récemment, n'étaient disponibles que pour les grandes entreprises.</p>
+        <div class="expertise-points">
+          <div class="exp-point">
+            <span class="exp-check">✓</span>
+            <span>Infrastructure, réseaux et sécurité informatique</span>
+          </div>
+          <div class="exp-point">
+            <span class="exp-check">✓</span>
+            <span>Développement web et intégrations systèmes</span>
+          </div>
+          <div class="exp-point">
+            <span class="exp-check">✓</span>
+            <span>Intelligence artificielle appliquée aux PME</span>
+          </div>
+          <div class="exp-point">
+            <span class="exp-check">✓</span>
+            <span>Formation et accompagnement technologique</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESSUS -->
+  <section id="processus">
+    <div class="container">
+      <div class="section-header centered">
+        <div class="section-tag">Comment ça fonctionne</div>
+        <h2>Opérationnel en 72 heures</h2>
+      </div>
+      <div class="process-steps">
+        <div class="process-step reveal">
+          <div class="step-num">01</div>
+          <div class="step-body">
             <h4>Consultation gratuite</h4>
-            <p>On analyse vos besoins, votre secteur et vos objectifs lors d'un appel de 30 minutes.</p>
+            <p>Appel de 30 minutes pour analyser vos besoins, votre secteur et vos objectifs. Aucun engagement.</p>
           </div>
-          <div class="step-line"></div>
         </div>
-        <div class="step">
-          <div class="step-number">02</div>
-          <div class="step-content">
-            <h4>Configuration & personnalisation</h4>
-            <p>On configure et entraîne l'IA avec les informations de votre entreprise, vos produits et votre ton.</p>
+        <div class="process-arrow">→</div>
+        <div class="process-step reveal">
+          <div class="step-num">02</div>
+          <div class="step-body">
+            <h4>Proposition sur mesure</h4>
+            <p>Je vous soumets une proposition claire avec les livrables, le calendrier et les coûts — sans surprise.</p>
           </div>
-          <div class="step-line"></div>
         </div>
-        <div class="step">
-          <div class="step-number">03</div>
-          <div class="step-content">
-            <h4>Déploiement & tests</h4>
-            <p>Déploiement sur vos plateformes avec une période de tests pour affiner les réponses.</p>
+        <div class="process-arrow">→</div>
+        <div class="process-step reveal">
+          <div class="step-num">03</div>
+          <div class="step-body">
+            <h4>Configuration & déploiement</h4>
+            <p>Je configure votre solution, l'entraîne sur votre business et la déploie sur vos plateformes.</p>
           </div>
-          <div class="step-line"></div>
         </div>
-        <div class="step">
-          <div class="step-number">04</div>
-          <div class="step-content">
-            <h4>Suivi & optimisation</h4>
-            <p>Tableaux de bord en temps réel, rapports mensuels et optimisation continue de vos agents IA.</p>
+        <div class="process-arrow">→</div>
+        <div class="process-step reveal">
+          <div class="step-num">04</div>
+          <div class="step-body">
+            <h4>Suivi & support continu</h4>
+            <p>Je reste disponible après le lancement. Ajustements, optimisations et support prioritaire inclus.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA BANNER -->
-  <section id="cta-banner">
+  <!-- CTA -->
+  <section id="cta-band">
     <div class="container">
-      <div class="cta-inner">
-        <div class="cta-glow"></div>
-        <h2>Prêt à automatiser votre<br /><span class="gold-text">croissance ?</span></h2>
-        <p>Réservez votre consultation gratuite aujourd'hui et voyez comment l'IA peut transformer votre business en moins d'une semaine.</p>
-        <a href="#contact" class="btn-primary btn-large">Réserver ma démo gratuite</a>
-        <div class="cta-note">Aucun engagement requis · Réponse en moins de 24h</div>
+      <div class="cta-content">
+        <h2>Prêt à faire travailler la technologie <em>pour vous</em> ?</h2>
+        <p>Réservez votre consultation gratuite. En 30 minutes, vous saurez exactement ce que je peux faire pour votre entreprise.</p>
+        <a href="#contact" class="btn-primary btn-large">Réserver ma consultation — c'est gratuit</a>
+        <div class="cta-note">Aucune obligation · Réponse sous 24h · Service en français</div>
       </div>
     </div>
   </section>
@@ -212,36 +328,36 @@
   <!-- CONTACT -->
   <section id="contact">
     <div class="container">
-      <div class="contact-grid">
-        <div class="contact-info">
-          <div class="section-label">Nous joindre</div>
-          <h2>Parlons de votre<br /><span class="gold-text">projet</span></h2>
-          <p>Que ce soit pour un site web, un agent IA ou notre service vocal, notre équipe est prête à vous accompagner.</p>
-          <div class="contact-items">
-            <div class="contact-item">
-              <div class="contact-icon">✉</div>
+      <div class="contact-wrap">
+        <div class="contact-left">
+          <div class="section-tag">Contact</div>
+          <h2>Parlons de votre projet</h2>
+          <p>Que vous ayez un projet précis en tête ou que vous souhaitiez simplement explorer les possibilités, je suis là pour répondre à vos questions.</p>
+          <div class="contact-details">
+            <div class="contact-row">
+              <div class="c-icon">✉</div>
               <div>
-                <strong>Email</strong>
-                <span>info@mycomane.org</span>
+                <label>Courriel</label>
+                <strong>info@mycomane.org</strong>
               </div>
             </div>
-            <div class="contact-item">
-              <div class="contact-icon">📞</div>
+            <div class="contact-row">
+              <div class="c-icon">📞</div>
               <div>
-                <strong>Téléphone</strong>
-                <span>+1 (581) 984-8008</span>
+                <label>Téléphone</label>
+                <strong>+1 (581) 984-8008</strong>
               </div>
             </div>
-            <div class="contact-item">
-              <div class="contact-icon">📍</div>
+            <div class="contact-row">
+              <div class="c-icon">📍</div>
               <div>
-                <strong>Localisation</strong>
-                <span>Québec, Canada</span>
+                <label>Région desservie</label>
+                <strong>Québec, Canada</strong>
               </div>
             </div>
           </div>
         </div>
-        <div class="contact-form-wrap">
+        <div class="contact-right">
           <form id="contactForm" class="contact-form" novalidate>
             <div class="form-row">
               <div class="form-group">
@@ -255,28 +371,32 @@
             </div>
             <div class="form-group">
               <label for="email">Courriel</label>
-              <input type="email" id="email" placeholder="jean@example.com" required />
+              <input type="email" id="email" placeholder="jean@monentreprise.com" required />
             </div>
             <div class="form-group">
-              <label for="service">Service qui vous intéresse</label>
+              <label for="tel">Téléphone (optionnel)</label>
+              <input type="tel" id="tel" placeholder="514 000-0000" />
+            </div>
+            <div class="form-group">
+              <label for="service">Service souhaité</label>
               <select id="service">
-                <option value="">Choisir un service...</option>
-                <option>Conception de site web</option>
+                <option value="">Choisir...</option>
+                <option>Site web professionnel</option>
                 <option>Agent IA sur mes plateformes</option>
                 <option>Agent IA vocal</option>
                 <option>Forfait complet</option>
+                <option>Je veux en savoir plus d'abord</option>
               </select>
             </div>
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" rows="4" placeholder="Dites-nous en plus sur votre projet..."></textarea>
+              <textarea id="message" rows="4" placeholder="Décrivez brièvement votre entreprise et ce que vous recherchez..."></textarea>
             </div>
             <button type="submit" class="btn-primary btn-full">
-              <span class="btn-text">Envoyer ma demande</span>
-              <span class="btn-arrow">→</span>
+              Envoyer ma demande <span class="btn-arrow">→</span>
             </button>
             <div class="form-success" id="formSuccess">
-              ✓ Message envoyé ! Nous vous contactons sous 24h.
+              ✓ Merci ! Vous recevrez une réponse dans les 24 heures.
             </div>
           </form>
         </div>
@@ -287,52 +407,50 @@
   <!-- FOOTER -->
   <footer id="footer">
     <div class="container">
-      <div class="footer-top">
+      <div class="footer-grid">
         <div class="footer-brand">
           <a href="#" class="logo">
-            <span class="logo-icon"><svg viewBox="0 0 18 18" fill="none"><path d="M3 9h12M9 3v12M5 5l8 8M13 5l-8 8" stroke="#0B0F1A" stroke-width="2" stroke-linecap="round"/></svg></span>
+            <span class="logo-mark">M</span>
             <span class="logo-text">Mycomane</span>
           </a>
-          <p>L'intelligence artificielle au service de votre croissance.</p>
-          <div class="social-links">
-            <a href="#" aria-label="Instagram">
-              <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
-            </a>
+          <p>Agence Web & Intelligence Artificielle au service des entrepreneurs québécois.</p>
+          <div class="social-row">
             <a href="#" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="4" stroke="currentColor" stroke-width="1.8"/><path d="M7 10v7M7 7v.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M11 17v-4a2 2 0 014 0v4M11 10v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="4" stroke="currentColor" stroke-width="1.8"/><path d="M7 10v7M7 7v.5M11 17v-4a2 2 0 014 0v4M11 10v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
             </a>
             <a href="#" aria-label="Facebook">
               <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="4" stroke="currentColor" stroke-width="1.8"/><path d="M15 8h-2a1 1 0 00-1 1v2h3l-.5 3H12v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+            </a>
           </div>
         </div>
-        <div class="footer-links">
-          <div class="footer-col">
-            <h5>Services</h5>
-            <a href="#services">Conception Web</a>
-            <a href="#services">Agents IA</a>
-            <a href="#services">Agent Vocal IA</a>
-          </div>
-          <div class="footer-col">
-            <h5>Entreprise</h5>
-            <a href="#pourquoi">À propos</a>
-            <a href="#comment">Comment ça marche</a>
-            <a href="#contact">Contact</a>
-          </div>
-          <div class="footer-col">
-            <h5>Légal</h5>
-            <a href="#">Politique de confidentialité</a>
-            <a href="#">Conditions d'utilisation</a>
-          </div>
+        <div class="footer-col">
+          <h5>Services</h5>
+          <a href="#services">Conception Web</a>
+          <a href="#services">Agents IA</a>
+          <a href="#services">Agent Vocal IA</a>
+        </div>
+        <div class="footer-col">
+          <h5>Entreprise</h5>
+          <a href="#expertise">À propos</a>
+          <a href="#processus">Processus</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h5>Légal</h5>
+          <a href="#">Politique de confidentialité</a>
+          <a href="#">Conditions d'utilisation</a>
         </div>
       </div>
       <div class="footer-bottom">
         <span>© 2026 Mycomane. Tous droits réservés.</span>
-        <span>Fait avec ❤ au Québec</span>
+        <span>Conçu et développé au Québec 🍁</span>
       </div>
     </div>
   </footer>
 
-  <script src="script.js?v=2"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>
