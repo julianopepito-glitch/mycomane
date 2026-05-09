@@ -40,7 +40,7 @@ function createParticle() {
     vx: (Math.random() - 0.5) * 0.3,
     vy: (Math.random() - 0.5) * 0.3,
     alpha: Math.random() * 0.5 + 0.1,
-    color: Math.random() > 0.5 ? '124,58,237' : '6,182,212'
+    color: Math.random() > 0.5 ? '58,110,168' : '201,168,76'
   };
 }
 
@@ -70,7 +70,7 @@ function drawParticles() {
         ctx.beginPath();
         ctx.moveTo(particles[i].x, particles[i].y);
         ctx.lineTo(particles[j].x, particles[j].y);
-        ctx.strokeStyle = `rgba(124,58,237,${0.08 * (1 - dist / 100)})`;
+        ctx.strokeStyle = `rgba(58,110,168,${0.1 * (1 - dist / 100)})`;
         ctx.lineWidth = 0.5;
         ctx.stroke();
       }
