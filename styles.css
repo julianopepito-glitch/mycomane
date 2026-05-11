@@ -81,10 +81,9 @@ img { display: block; max-width: 100%; }
 .nav-inner { max-width: 1160px; margin: 0 auto; padding: 0 28px; display: flex; align-items: center; justify-content: space-between; }
 .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .logo-mark {
-  width: 34px; height: 34px; background: var(--dark); color: #fff;
-  border-radius: 8px; display: flex; align-items: center; justify-content: center;
-  font-weight: 900; font-size: 16px; letter-spacing: -0.5px;
+  width: 36px; height: 36px;
   flex-shrink: 0;
+  display: block;
 }
 .logo-text { font-size: 18px; font-weight: 800; color: var(--dark); letter-spacing: -0.3px; }
 .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
@@ -300,7 +299,7 @@ img { display: block; max-width: 100%; }
 /* ===== FOOTER ===== */
 #footer { padding: 60px 0 28px; background: var(--dark); }
 .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
-.footer-brand .logo .logo-mark { background: var(--white); color: var(--dark); }
+.footer-brand .logo .logo-mark { filter: invert(1) brightness(2); }
 .footer-brand .logo .logo-text { color: var(--white); }
 .footer-brand p { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.75; margin: 16px 0 24px; max-width: 240px; }
 .social-row { display: flex; gap: 10px; }
