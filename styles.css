@@ -299,7 +299,7 @@ img { display: block; max-width: 100%; }
 /* ===== FOOTER ===== */
 #footer { padding: 60px 0 28px; background: var(--dark); }
 .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
-.footer-brand .logo .logo-mark { filter: invert(1) brightness(2); }
+.footer-brand .logo .logo-mark { filter: none; }
 .footer-brand .logo .logo-text { color: var(--white); }
 .footer-brand p { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.75; margin: 16px 0 24px; max-width: 240px; }
 .social-row { display: flex; gap: 10px; }
