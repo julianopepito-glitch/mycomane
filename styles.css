@@ -304,17 +304,18 @@ img { display: block; max-width: 100%; }
 }
 .philo-inner {
   display: flex;
-  gap: 32px;
-  align-items: center;
+  gap: 64px;
+  align-items: flex-start;
 }
 .philo-logo {
   flex-shrink: 0;
-  align-self: center;
+  align-self: flex-start;
+  margin-left: -24px;
 }
 .philo-logo img {
-  width: 64px;
-  height: 64px;
-  border-radius: 12px;
+  width: 128px;
+  height: 128px;
+  border-radius: 20px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.08);
 }
 .philo-text .section-tag { margin-bottom: 20px; }
@@ -343,7 +344,8 @@ img { display: block; max-width: 100%; }
 
 @media (max-width: 768px) {
   .philo-inner { flex-direction: column; align-items: flex-start; gap: 24px; }
-  .philo-logo img { width: 52px; height: 52px; }
+  .philo-logo { margin-left: 0; }
+  .philo-logo img { width: 80px; height: 80px; }
   .philo-lead { font-size: 17px; }
 }
 
