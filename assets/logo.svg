@@ -1,80 +1,41 @@
-<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="-8 -2 118 108" fill="none" xmlns="http://www.w3.org/2000/svg">
 
-  <!-- Fond blanc -->
-  <rect width="100" height="100" rx="18" fill="#FFFFFF"/>
+  <!-- Fond blanc arrondi -->
+  <rect x="-8" y="-2" width="118" height="108" rx="18" fill="#FFFFFF"/>
 
-  <!-- ===== M principal — traits épais ===== -->
+  <!-- ===== RÉSEAU MYCÉLIEN — concept #1 adapté ===== -->
+  <!-- Filaments principaux depuis le centre (50,50) -->
+  <path d="M 50 50 C 38 38, 28 28, 18 14" stroke="#0D1421" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  <path d="M 50 50 C 50 35, 50 20, 52 8"  stroke="#0D1421" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  <path d="M 50 50 C 62 40, 72 28, 86 16" stroke="#0D1421" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  <path d="M 50 50 C 65 52, 78 55, 94 60" stroke="#0D1421" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  <path d="M 50 50 C 58 62, 65 75, 75 90" stroke="#0D1421" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  <path d="M 50 50 C 40 60, 30 75, 20 90" stroke="#0D1421" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  <path d="M 50 50 C 35 48, 22 46,  6 44" stroke="#0D1421" stroke-width="3.5" stroke-linecap="round" fill="none"/>
 
-  <!-- Jambe gauche -->
-  <line x1="18" y1="84" x2="18" y2="18" stroke="#0D1421" stroke-width="6" stroke-linecap="round"/>
+  <!-- Sous-branches (plus fines, organiques) -->
+  <path d="M 32 30 C 26 28, 20 28, 14 30" stroke="#0D1421" stroke-width="2"   stroke-linecap="round" fill="none"/>
+  <path d="M 68 32 C 75 28, 82 26, 88 28" stroke="#0D1421" stroke-width="2"   stroke-linecap="round" fill="none"/>
+  <path d="M 65 75 C 70 78, 76 82, 82 84" stroke="#0D1421" stroke-width="2"   stroke-linecap="round" fill="none"/>
+  <path d="M 30 75 C 25 78, 18 80, 12 82" stroke="#0D1421" stroke-width="2"   stroke-linecap="round" fill="none"/>
 
-  <!-- Diagonale gauche -->
-  <line x1="18" y1="18" x2="50" y2="54" stroke="#0D1421" stroke-width="6" stroke-linecap="round"/>
+  <!-- Nœuds terminaux principaux (bleu) -->
+  <circle cx="18" cy="14" r="5"   fill="#1B4FD8"/>
+  <circle cx="52" cy="8"  r="5.5" fill="#1B4FD8"/>
+  <circle cx="86" cy="16" r="4.5" fill="#1B4FD8"/>
+  <circle cx="94" cy="60" r="5"   fill="#1B4FD8"/>
+  <circle cx="75" cy="90" r="5.5" fill="#1B4FD8"/>
+  <circle cx="20" cy="90" r="5"   fill="#1B4FD8"/>
+  <circle cx="6"  cy="44" r="4"   fill="#1B4FD8"/>
 
-  <!-- Diagonale droite -->
-  <line x1="50" y1="54" x2="82" y2="18" stroke="#0D1421" stroke-width="6" stroke-linecap="round"/>
+  <!-- Nœuds terminaux sous-branches (marine) -->
+  <circle cx="14" cy="30" r="3" fill="#0D1421"/>
+  <circle cx="88" cy="28" r="3" fill="#0D1421"/>
+  <circle cx="82" cy="84" r="3" fill="#0D1421"/>
+  <circle cx="12" cy="82" r="3" fill="#0D1421"/>
 
-  <!-- Jambe droite -->
-  <line x1="82" y1="18" x2="82" y2="84" stroke="#0D1421" stroke-width="6" stroke-linecap="round"/>
-
-  <!-- ===== BRANCHES MYCÉLIUM — épaisses et peu nombreuses ===== -->
-
-  <!-- Sommet gauche — branche vers haut-gauche -->
-  <line x1="18" y1="18" x2="7" y2="7" stroke="#0D1421" stroke-width="3" stroke-linecap="round"/>
-
-  <!-- Mi-jambe gauche — branche gauche -->
-  <line x1="18" y1="50" x2="7" y2="43" stroke="#0D1421" stroke-width="2.5" stroke-linecap="round"/>
-
-  <!-- Pied gauche — branche vers bas -->
-  <line x1="18" y1="84" x2="10" y2="95" stroke="#0D1421" stroke-width="3" stroke-linecap="round"/>
-
-  <!-- Centre (vallée) — branche vers le bas -->
-  <line x1="50" y1="54" x2="50" y2="72" stroke="#0D1421" stroke-width="3" stroke-linecap="round"/>
-  <line x1="50" y1="72" x2="41" y2="83" stroke="#0D1421" stroke-width="2.5" stroke-linecap="round"/>
-  <line x1="50" y1="72" x2="59" y2="83" stroke="#0D1421" stroke-width="2.5" stroke-linecap="round"/>
-
-  <!-- Mi-jambe droite — branche droite -->
-  <line x1="82" y1="50" x2="93" y2="43" stroke="#0D1421" stroke-width="2.5" stroke-linecap="round"/>
-
-  <!-- Sommet droit — branche vers haut-droite -->
-  <line x1="82" y1="18" x2="93" y2="7" stroke="#0D1421" stroke-width="3" stroke-linecap="round"/>
-
-  <!-- Pied droit — branche vers bas -->
-  <line x1="82" y1="84" x2="90" y2="95" stroke="#0D1421" stroke-width="3" stroke-linecap="round"/>
-
-  <!-- ===== NŒUDS PRINCIPAUX ===== -->
-
-  <!-- Pied gauche -->
-  <circle cx="18" cy="84" r="6" fill="#0D1421"/>
-  <!-- Sommet gauche -->
-  <circle cx="18" cy="18" r="6" fill="#0D1421"/>
-  <!-- Centre — double cercle = point focal -->
-  <circle cx="50" cy="54" r="7.5" fill="#0D1421"/>
-  <circle cx="50" cy="54" r="4.5" fill="#1B4FD8"/>
-  <!-- Sommet droit -->
-  <circle cx="82" cy="18" r="6" fill="#0D1421"/>
-  <!-- Pied droit -->
-  <circle cx="82" cy="84" r="6" fill="#0D1421"/>
-
-  <!-- Nœuds mi-jambes -->
-  <circle cx="18" cy="50" r="4" fill="#1B4FD8"/>
-  <circle cx="82" cy="50" r="4" fill="#1B4FD8"/>
-
-  <!-- Nœuds mi-diagonales -->
-  <circle cx="32" cy="34" r="3.5" fill="#1B4FD8"/>
-  <circle cx="68" cy="34" r="3.5" fill="#1B4FD8"/>
-
-  <!-- ===== NŒUDS TERMINAUX des branches ===== -->
-  <circle cx="7"  cy="7"  r="4" fill="#1B4FD8"/>
-  <circle cx="7"  cy="43" r="3" fill="#1B4FD8"/>
-  <circle cx="10" cy="95" r="3.5" fill="#1B4FD8"/>
-
-  <circle cx="50" cy="72" r="3.5" fill="#1B4FD8"/>
-  <circle cx="41" cy="83" r="3" fill="#0D1421"/>
-  <circle cx="59" cy="83" r="3" fill="#0D1421"/>
-
-  <circle cx="93" cy="43" r="3" fill="#1B4FD8"/>
-  <circle cx="93" cy="7"  r="4" fill="#1B4FD8"/>
-  <circle cx="90" cy="95" r="3.5" fill="#1B4FD8"/>
+  <!-- Nœud central -->
+  <circle cx="50" cy="50" r="9"   fill="#0D1421"/>
+  <circle cx="50" cy="50" r="5.5" fill="#1B4FD8"/>
 
 </svg>
