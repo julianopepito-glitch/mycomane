@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarifs — Mycomane</title>
+<meta name="description" content="Grille tarifaire Mycomane — Sites web, Agents IA et Agent vocal pour entrepreneurs québécois.">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --dark: #0D1421;
+  --blue: #1B4FD8;
+  --white: #FFFFFF;
+  --off: #F5F6F8;
+  --muted: #6b7280;
+  --border: #e2e8f0;
+}
+body { font-family: Inter, sans-serif; background: var(--off); color: var(--dark); }
+
+/* ── NAVBAR ── */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(13,20,33,0.97);
+  backdrop-filter: blur(10px);
+  padding: 0 32px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 68px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.nav-left { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.nav-left img { width: 36px; height: 36px; border-radius: 8px; }
+.nav-left span { font-size: 18px; font-weight: 800; color: #fff; }
+.nav-back {
+  display: flex; align-items: center; gap: 8px;
+  color: rgba(255,255,255,0.6); text-decoration: none;
+  font-size: 14px; font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-back:hover { color: #fff; }
+.nav-back svg { width: 16px; height: 16px; }
+.btn-nav-cta {
+  background: var(--blue); color: #fff;
+  padding: 10px 20px; border-radius: 8px;
+  text-decoration: none; font-size: 14px; font-weight: 600;
+  transition: background 0.2s;
+}
+.btn-nav-cta:hover { background: #1440b0; }
+
+/* ── HERO ── */
+.tarifs-hero {
+  background: linear-gradient(135deg, #060d1f 0%, #0D1421 60%, #0d1f3c 100%);
+  padding: 72px 24px 60px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  position: relative; overflow: hidden;
+}
+.tarifs-hero::before {
+  content:''; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+  width:600px; height:600px; border-radius:50%;
+  background:radial-gradient(circle, rgba(27,79,216,0.15) 0%, transparent 70%);
+  pointer-events:none;
+}
+.hero-badge {
+  display: inline-block;
+  background: rgba(27,79,216,0.2); border: 1px solid rgba(27,79,216,0.4);
+  color: #7ba7ff; font-size: 13px; font-weight: 600;
+  padding: 6px 16px; border-radius: 20px; margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+.tarifs-hero h1 {
+  font-size: clamp(36px, 5vw, 56px); font-weight: 900;
+  color: #fff; letter-spacing: -1px; margin-bottom: 16px;
+}
+.tarifs-hero h1 em { color: var(--blue); font-style: normal; }
+.tarifs-hero p {
+  font-size: 18px; color: rgba(255,255,255,0.65);
+  max-width: 560px; margin: 0 auto 32px; line-height: 1.7; font-weight: 300;
+}
+.hero-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--blue); color: #fff;
+  padding: 14px 28px; border-radius: 10px;
+  text-decoration: none; font-size: 16px; font-weight: 700;
+  transition: background 0.2s, transform 0.2s;
+}
+.hero-cta:hover { background: #1440b0; transform: translateY(-1px); }
+
+/* ── MAIN CONTAINER ── */
+.container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+.tarifs-body { padding: 56px 0 80px; }
+
+/* ── SERVICE BLOCK ── */
+.service-block {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+  margin-bottom: 32px;
+  overflow: hidden;
+}
+.service-top {
+  display: flex; align-items: center; gap: 16px;
+  padding: 28px 32px 20px;
+  border-bottom: 1px solid var(--border);
+}
+.service-icon {
+  width: 48px; height: 48px; border-radius: 12px;
+  background: linear-gradient(135deg, #1B4FD8, #0a2a80);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; flex-shrink: 0;
+}
+.service-name { font-size: 20px; font-weight: 800; color: var(--dark); }
+.service-sub { font-size: 13px; color: var(--muted); margin-top: 3px; }
+
+/* ── TABLE ── */
+.price-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.price-table thead tr { background: var(--dark); }
+.price-table thead th {
+  color: #fff; font-weight: 600; padding: 12px 16px; text-align: left;
+  font-size: 13px;
+}
+.price-table thead th:first-child { width: 40%; }
+.price-table tbody tr:nth-child(even) { background: #f8fafc; }
+.price-table tbody tr:hover { background: #eff6ff; transition: background 0.15s; }
+.price-table tbody td {
+  padding: 11px 16px; color: #374151;
+  border-bottom: 1px solid var(--border);
+}
+.price-table tbody td:first-child { font-weight: 500; color: var(--dark); }
+.price-table tbody tr:last-child td { border-bottom: none; }
+.check { color: var(--blue); font-weight: 700; text-align: center; }
+.cross { color: #d1d5db; text-align: center; }
+.cell-center { text-align: center; }
+.price-badge {
+  background: linear-gradient(135deg, #1B4FD8, #1440c0);
+  color: #fff; font-weight: 800; font-size: 16px; text-align: center;
+  padding: 12px 16px;
+}
+.price-monthly {
+  color: var(--blue); font-weight: 800; font-size: 15px; text-align: center;
+}
+
+/* ── MAINTENANCE BOX ── */
+.maintenance-box {
+  margin: 16px 32px 24px;
+  background: #f8fafc; border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  border-radius: 10px; padding: 14px 18px;
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 12px; flex-wrap: wrap;
+}
+.maintenance-box .m-text { font-size: 13.5px; color: var(--dark); line-height: 1.6; }
+.maintenance-box .m-badge {
+  background: #eff6ff; border: 1px solid #bfdbfe;
+  color: var(--blue); font-size: 12px; font-weight: 700;
+  padding: 4px 12px; border-radius: 20px; white-space: nowrap;
+}
+.maintenance-note { font-size: 11.5px; color: #9ca3af; font-style: italic; margin: -8px 32px 20px; }
+
+/* ── BUNDLES ── */
+.bundles {
+  background: linear-gradient(135deg, #060d1f, #0D1421);
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 32px;
+}
+.bundles h2 { color: #fff; font-size: 20px; font-weight: 700; margin-bottom: 20px; }
+.bundle-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+@media (max-width: 640px) { .bundle-grid { grid-template-columns: 1fr; } }
+.bundle-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(27,79,216,0.4);
+  border-radius: 12px; padding: 20px;
+  transition: border-color 0.2s, background 0.2s;
+}
+.bundle-card:hover { background: rgba(255,255,255,0.1); border-color: rgba(27,79,216,0.7); }
+.bundle-card h3 { color: #7ba7ff; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
+.bundle-card .price { color: #fff; font-size: 20px; font-weight: 800; line-height: 1.3; margin-bottom: 4px; }
+.bundle-card .sub { color: rgba(255,255,255,0.55); font-size: 13px; margin-bottom: 8px; }
+.bundle-card .saving { color: #4ade80; font-size: 13px; font-weight: 600; }
+
+/* ── BOTTOM CTA ── */
+.bottom-cta {
+  background: #fff; border-radius: 16px;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+  padding: 40px 32px; text-align: center;
+}
+.bottom-cta h2 { font-size: 26px; font-weight: 800; color: var(--dark); margin-bottom: 12px; }
+.bottom-cta p { font-size: 16px; color: var(--muted); margin-bottom: 28px; line-height: 1.7; }
+.cta-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.btn-primary {
+  background: var(--blue); color: #fff;
+  padding: 14px 28px; border-radius: 10px;
+  text-decoration: none; font-size: 15px; font-weight: 700;
+  transition: background 0.2s, transform 0.2s;
+  display: inline-block;
+}
+.btn-primary:hover { background: #1440b0; transform: translateY(-1px); }
+.btn-secondary {
+  background: var(--off); color: var(--dark);
+  padding: 14px 28px; border-radius: 10px;
+  text-decoration: none; font-size: 15px; font-weight: 600;
+  border: 1px solid var(--border);
+  transition: background 0.2s;
+  display: inline-block;
+}
+.btn-secondary:hover { background: #e8edf5; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--dark); color: rgba(255,255,255,0.45);
+  text-align: center; padding: 28px 24px;
+  font-size: 13px; line-height: 1.8;
+}
+footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
+footer a:hover { color: #fff; }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <a href="index.html" class="nav-left">
+    <img src="assets/logo.svg" alt="Logo Mycomane">
+    <span>Mycomane</span>
+  </a>
+  <a href="index.html" class="nav-back">
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 12L6 8l4-4"/></svg>
+    Retour au site
+  </a>
+  <a href="index.html#contact" class="btn-nav-cta">Consultation gratuite</a>
+</nav>
+
+<!-- HERO -->
+<section class="tarifs-hero">
+  <div class="hero-badge">Grille tarifaire 2026</div>
+  <h1>Des prix <em>transparents</em><br>pour chaque budget</h1>
+  <p>Trois services, plusieurs forfaits. Trouvez la solution qui correspond à votre réalité d'entrepreneur québécois.</p>
+  <a href="index.html#contact" class="hero-cta">✓ Consultation gratuite — sans engagement</a>
+</section>
+
+<!-- TARIFS BODY -->
+<div class="tarifs-body">
+<div class="container">
+
+  <!-- SERVICE 1 -->
+  <div class="service-block">
+    <div class="service-top">
+      <div class="service-icon">🌐</div>
+      <div>
+        <div class="service-name">Service 1 — Sites web professionnels</div>
+        <div class="service-sub">Design sur mesure, adapté mobile, livré en 1 à 3 semaines</div>
+      </div>
+    </div>
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th>Inclus</th>
+          <th style="text-align:center">Essentiel</th>
+          <th style="text-align:center">Professionnel</th>
+          <th style="text-align:center">Premium</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td>
+          <td class="price-badge">1 500 $</td>
+          <td class="price-badge">2 800 $</td>
+          <td class="price-badge">4 500 $+</td>
+        </tr>
+        <tr><td>Nombre de pages</td><td class="cell-center">5 pages</td><td class="cell-center">10 pages</td><td class="cell-center">Illimité</td></tr>
+        <tr><td>Design personnalisé</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Adapté mobile</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Formulaire de contact</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Optimisation SEO</td><td class="cell-center">De base</td><td class="cell-center">Complète</td><td class="cell-center">Avancée</td></tr>
+        <tr><td>Blogue</td><td class="cross">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Google Analytics</td><td class="cross">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Boutique en ligne</td><td class="cross">—</td><td class="cross">—</td><td class="check">✓</td></tr>
+        <tr><td>Révisions incluses</td><td class="cell-center">2</td><td class="cell-center">3</td><td class="cell-center">Illimitées</td></tr>
+        <tr><td>Délai de livraison</td><td class="cell-center">1–2 semaines</td><td class="cell-center">2–3 semaines</td><td class="cell-center">Sur devis</td></tr>
+      </tbody>
+    </table>
+    <div class="maintenance-box">
+      <div class="m-text">
+        🔧 <strong>Maintenance annuelle : 199 $/an</strong><br>
+        <span style="font-size:12.5px;color:#6b7280;">Hébergement · Renouvellement de domaine* · Sécurité · 1h de modifications</span>
+      </div>
+      <span class="m-badge">Optionnel</span>
+    </div>
+    <p class="maintenance-note">* Sous réserve de validation du prix du nom de domaine auprès du registraire.</p>
+  </div>
+
+  <!-- SERVICE 2 -->
+  <div class="service-block">
+    <div class="service-top">
+      <div class="service-icon">🤖</div>
+      <div>
+        <div class="service-name">Service 2 — Agent IA (site web & réseaux sociaux)</div>
+        <div class="service-sub">Un assistant intelligent qui répond et capture vos prospects 24h/24</div>
+      </div>
+    </div>
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th>Inclus</th>
+          <th style="text-align:center">Starter</th>
+          <th style="text-align:center">Avancé</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Installation (une seule fois)</td><td class="price-badge">800 $</td><td class="price-badge">1 500 $</td></tr>
+        <tr><td>Abonnement mensuel</td><td class="price-monthly">99 $/mois</td><td class="price-monthly">179 $/mois</td></tr>
+        <tr><td>Intégration site web</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Intégration Facebook</td><td class="cross">—</td><td class="check">✓</td></tr>
+        <tr><td>Questions programmées</td><td class="cell-center">20 questions</td><td class="cell-center">Contenu complet</td></tr>
+        <tr><td>Formulaire de contact intégré</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Qualification des prospects</td><td class="cross">—</td><td class="check">✓</td></tr>
+        <tr><td>Notification texto / courriel par lead</td><td class="cross">—</td><td class="check">✓</td></tr>
+        <tr><td>Transfert vers humain en direct</td><td class="cross">—</td><td class="check">✓</td></tr>
+        <tr><td>Rapport mensuel</td><td class="cell-center">Simple</td><td class="cell-center">Détaillé</td></tr>
+        <tr><td>Mises à jour du contenu / mois</td><td class="cell-center">1</td><td class="cell-center">3</td></tr>
+        <tr><td>Disponibilité</td><td class="cell-center">24h/24, 7j/7</td><td class="cell-center">24h/24, 7j/7</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SERVICE 3 -->
+  <div class="service-block">
+    <div class="service-top">
+      <div class="service-icon">📞</div>
+      <div>
+        <div class="service-name">Service 3 — Agent vocal IA 24h/24</div>
+        <div class="service-sub">Votre téléphone répondu en tout temps — urgences transférées sur votre cellulaire</div>
+      </div>
+    </div>
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th>Inclus</th>
+          <th style="text-align:center">PME</th>
+          <th style="text-align:center">Croissance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Installation (une seule fois)</td><td class="price-badge">1 200 $</td><td class="price-badge">1 200 $</td></tr>
+        <tr><td>Abonnement mensuel</td><td class="price-monthly">199 $/mois</td><td class="price-monthly">329 $/mois</td></tr>
+        <tr><td>Minutes incluses / mois</td><td class="cell-center">300 min</td><td class="cell-center">600 min</td></tr>
+        <tr><td>Réponse personnalisée à votre image</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Transfert urgences sur cellulaire</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Prise de messages</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Prise de rendez-vous</td><td class="cross">—</td><td class="check">✓</td></tr>
+        <tr><td>Scénarios d'appel</td><td class="cell-center">1 scénario</td><td class="cell-center">3 scénarios</td></tr>
+        <tr><td>Voix personnalisée</td><td class="cell-center">Standard</td><td class="cell-center">Personnalisée</td></tr>
+        <tr><td>Rapport mensuel (appels, durée)</td><td class="cell-center">Simple</td><td class="cell-center">Détaillé</td></tr>
+        <tr><td>Minutes supplémentaires</td><td class="cell-center">0,50 $/min</td><td class="cell-center">0,40 $/min</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- BUNDLES -->
+  <div class="bundles">
+    <h2>💡 Forfaits combinés — Économisez en regroupant vos services</h2>
+    <div class="bundle-grid">
+      <div class="bundle-card">
+        <h3>Site web + Agent IA</h3>
+        <div class="price">À partir de 2 100 $</div>
+        <div class="sub">+ 99 $/mois</div>
+        <div class="saving">✓ 200 $ de rabais</div>
+      </div>
+      <div class="bundle-card">
+        <h3>Site web + Agent vocal</h3>
+        <div class="price">À partir de 3 500 $</div>
+        <div class="sub">+ 199 $/mois</div>
+        <div class="saving">✓ 200 $ de rabais</div>
+      </div>
+      <div class="bundle-card">
+        <h3>Tout inclus</h3>
+        <div class="price">À partir de 4 500 $</div>
+        <div class="sub">+ 349 $/mois</div>
+        <div class="saving">✓ 500 $ de rabais</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTTOM CTA -->
+  <div class="bottom-cta">
+    <h2>Une question sur nos tarifs ?</h2>
+    <p>Je vous offre une consultation gratuite de 30 minutes pour trouver la solution qui correspond exactement à vos besoins et votre budget.</p>
+    <div class="cta-buttons">
+      <a href="index.html#contact" class="btn-primary">📅 Réserver ma consultation gratuite</a>
+      <a href="index.html" class="btn-secondary">← Retour au site</a>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <strong style="color:rgba(255,255,255,0.7);">Mycomane</strong> — Agence Web & IA au Québec ⚜<br>
+  <a href="mailto:info@mycomane.org">info@mycomane.org</a> &nbsp;·&nbsp;
+  <a href="tel:+15819848008">(581) 984-8008</a> &nbsp;·&nbsp;
+  <a href="index.html">mycomane.org</a><br>
+  <span style="font-size:11px;">Prix en dollars canadiens, taxes en sus. Grille valide en 2026.</span>
+</footer>
+
+</body>
+</html>
